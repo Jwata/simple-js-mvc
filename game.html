@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+            <meta charset="utf-8">
+            <title></title>
+            <link rel="stylesheet" href="">
+            <script type="text/javascript" src="./controller/GameController.js"></script>
+            <script type="text/javascript" src="./model/GameModel.js"></script>
+            <script type="text/javascript" src="./view/UiView.js"></script>
+            <script type="text/javascript" src="./view/CommandView.js"></script>
+            <script type="text/javascript" src="./view/BattleAreaView.js"></script>
+    </head>
+    <body>
+    </body>
+    <script>
+    window.addEventListener("load" , function() {
+        var game = new GameController();
+        game.create();
+    });
+    </script>
+</html>
