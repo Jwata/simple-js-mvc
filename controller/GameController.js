@@ -1,14 +1,27 @@
 var GameController = (function() {
     function GameController () {
-        var self = this;
+        var game = self = this;
+
+        this.gameModel;
+        this.mainView;
     }
 
     GameController.prototype.create = function() {
-        this.init();
+        self.gameModel = new GameModel();
+        self.gameModel.create();
+
+        self.mainView = new MainView();
+        //self.mainView.setGame(game);
+        self.mainView.create();
+
+        self.initGame();
     };
 
-    GameController.prototype.init = function() {
+    GameController.prototype.initGame = function() {
         console.log('init game ....');
+
+        // now that we've created all the view elements,
+        // and the model, get the game started
     };
 
     GameController.prototype.finish = function() {
